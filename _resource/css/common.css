@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 .mHover {
+  cursor: pointer;
   transition: 0.5s;
 }
 .mHover:hover {
-  cursor: pointer;
   color: red;
 }
