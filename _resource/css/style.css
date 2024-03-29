@@ -21,11 +21,54 @@ header > ul > li a {
   padding: 30px;
 }
 
+.content {
+  text-align: center;
+  padding: 50px;
+}
+
+.links-front {
+  padding: 20px;
+}
+.links-front > ul {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.links-front > ul > li {
+  width: 25%;
+  padding: 10px;
+}
+.links-front > ul > li img {
+  width: 100%;
+  border: 1px solid #e6e8e9;
+  transition: 0.3s;
+}
+.links-front > ul > li img:hover {
+  border: 1px solid #333;
+}
+
 .mHover {
   transition: 0.5s;
 }
 .mHover:hover {
   color: red;
+}
+.linkicon {
+  display: inline-block;
+  position: relative;
+  border: 1px solid #777;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.linkicon::after {
+  content: "\e89e";
+  font-family: "Material Symbols Outlined";
+}
+.linkicon:hover {
+  background-color: #ffe0a7;
 }
 
 footer {
