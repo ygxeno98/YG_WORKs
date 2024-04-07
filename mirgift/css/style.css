@@ -1,0 +1,322 @@
+@charset "UTF-8";
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap");
+/* 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+*/
+@font-face {
+  font-family: "S-CoreDream300";
+  src: url("../font/SCDream3.otf") format("woff");
+}
+@font-face {
+  font-family: "S-CoreDream400";
+  src: url("../font/SCDream4.otf") format("woff");
+}
+@font-face {
+  font-family: "S-CoreDream600";
+  src: url("../font/SCDream6.otf") format("woff");
+}
+
+body {
+  font-family: "Poppins", "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  background-color: #111;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.mainVisual {
+  position: relative;
+  height: 860px;
+  background: url(../images/m-visual.jpg) no-repeat;
+  background-size: cover;
+}
+.mainVisual header {
+  position: relative;
+  height: 80px;
+}
+.mainVisual header img {
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  transform: translateX(-50%);
+}
+.mainVisual .m-copy {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+.mainVisual .m-copy p {
+  font-family: "S-CoreDream400";
+  font-size: 40px;
+  letter-spacing: -0.2rem;
+}
+.mainVisual .m-copy p.quick {
+  padding: 20px 0 30px 0;
+}
+.mainVisual .m-copy p.quick strong,
+.mainVisual .m-copy p.quick span {
+  font-family: "S-CoreDream600";
+  line-height: 75px;
+  vertical-align: top;
+  display: inline-block;
+}
+.mainVisual .m-copy p.quick strong {
+  font-size: 75px;
+  letter-spacing: -0.4rem;
+}
+.mainVisual .m-copy p.quick span {
+  font-size: 55px;
+  color: #ffc600;
+  border: 1px solid #ffc600;
+  margin-left: 10px;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+.mainVisual .circle {
+  display: inline-block;
+  text-align: center;
+  width: 50px;
+  line-height: 50px;
+  background-color: rgba(45, 92, 210, 0.4);
+  border-radius: 50%;
+  vertical-align: top;
+  margin-top: 5px;
+  color: #fff;
+}
+.mainVisual .m-copy u {
+  text-decoration: none;
+  color: #fff;
+}
+.mainVisual .m-copy .phone {
+  font-family: "Poppins";
+  color: #fff;
+}
+.mainVisual .m-copy .phone a {
+  display: inline-block;
+  padding: 0 20px 0 10px;
+  margin: 0 10px;
+  border-radius: 30px;
+  background-color: #000;
+}
+
+.todayTitle,
+.contactTitle {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.todayTitle .smTitle {
+  font-size: 0.89rem;
+  letter-spacing: 1rem;
+}
+.todayTitle h3,
+.contactTitle h3 {
+  font-size: 3.3rem;
+  padding-bottom: 15px;
+}
+.todayTitle p,
+.contactTitle p {
+  font-size: 1.39rem;
+  font-weight: 300;
+  color: #ccc;
+}
+
+.tab_content {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label {
+  display: block;
+  background-color: rgba(45, 92, 210, 0.15);
+  color: #fff;
+  font-size: 1.22rem;
+  cursor: pointer;
+  width: 19%;
+  line-height: 60px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+input[type="radio"] + label:hover {
+  background-color: rgba(45, 92, 210, 0.3);
+}
+input[type="radio"]:checked + label {
+  background-color: rgba(45, 92, 210, 1);
+}
+.conbox {
+  width: 100%;
+  height: auto;
+  display: none;
+  padding: 40px 0;
+}
+input[id="tab01"]:checked ~ .con1 {
+  display: block;
+}
+input[id="tab02"]:checked ~ .con2 {
+  display: block;
+}
+input[id="tab03"]:checked ~ .con3 {
+  display: block;
+}
+input[id="tab04"]:checked ~ .con4 {
+  display: block;
+}
+input[id="tab05"]:checked ~ .con5 {
+  display: block;
+}
+
+.conbox > table th,
+.conbox > table td {
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid #333333;
+}
+.conbox > table th {
+  width: 25%;
+  background: #1b1b1c;
+  border-top: 1px solid #2d5cd2;
+}
+.conbox > table td:nth-child(3) {
+  color: #ff952e;
+}
+.conbox > table td:nth-child(4) {
+  color: #44b6ff;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+.icons span.material-symbols-outlined {
+  font-size: 150px;
+}
+.icons div {
+  text-align: center;
+  width: 25%;
+}
+.icons div .title {
+  font-size: 1.39rem;
+  font-weight: 700;
+}
+
+.map {
+  display: flex;
+  gap: 50px;
+  margin-top: 40px;
+}
+.map .detail {
+  text-align: left;
+}
+.map .detail h4 {
+  font-size: 30px;
+}
+.map .detail p {
+  padding: 5px 0;
+  letter-spacing: 0;
+}
+.map .detail p.adress {
+  margin-bottom: 15px;
+}
+.map .detail p span {
+  display: inline-block;
+  width: 125px;
+  text-align: center;
+  letter-spacing: -1px;
+  background-color: #111;
+  padding: 2px 10px;
+  border: 1px solid #414141;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+.map .detail p a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.deepbg {
+  background-color: #000;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+}
+footer strong {
+  font-size: 1.2rem;
+  color: #ff9900;
+}
+footer a {
+  color: #fff;
+  letter-spacing: 0.1rem;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+  .wrapper {
+    width: 100%;
+    padding: 50px 10px;
+  }
+
+  .mainVisual {
+    height: 600px;
+  }
+  .mainVisual .m-copy {
+    transform: translateY(-30%);
+  }
+  .mainVisual .m-copy p {
+    font-size: 22px;
+  }
+  .mainVisual .m-copy p.quick {
+    padding: 0px 0 30px 0;
+  }
+  .mainVisual .m-copy p.quick strong {
+    font-size: 50px;
+  }
+  .mainVisual .m-copy p.quick span {
+    font-size: 35px;
+    line-height: 50px;
+    margin-top: 10px;
+  }
+
+  .todayTitle h3,
+  .contactTitle h3 {
+    font-size: 2.3rem;
+  }
+  .todayTitle p,
+  .contactTitle p {
+    font-size: 1rem;
+  }
+
+  .icons {
+    flex-direction: column;
+  }
+  .icons > div {
+    width: 100%;
+  }
+  .icons span.material-symbols-outlined {
+    font-size: 100px;
+  }
+
+  .map {
+    flex-direction: column;
+  }
+  .root_daum_roughmap {
+    width: 100% !important;
+  }
+}
